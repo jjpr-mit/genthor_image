@@ -1,0 +1,11 @@
+
+
+
+export SINGULARITY_CACHEDIR=/braintree/data2/active/users/`whoami`/singularity
+mkdir -p $SINGULARITY_CACHEDIR
+cd $SINGULARITY_CACHEDIR
+module load singularity/2.4.2
+singularity shell -B /braintree:/braintree --nv docker://jjprmit/genthor
+
+python
+import genthor.datasets as gd
