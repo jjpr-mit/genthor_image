@@ -35,12 +35,16 @@ ENV PATH_TO_GENTHOR=/home/genthor
 RUN mkdir -m 777 $PATH_TO_GENTHOR
 
 WORKDIR /home
+RUN git clone --branch simpler_dldata https://github.com/dicarlolab/dldata.git
 RUN git clone https://github.com/dicarlolab/genthor.git
 RUN git clone https://github.com/yamins81/tabular.git
 # RUN wget https://www.panda3d.org/download/panda3d-1.9.4/panda3d-1.9.4.tar.gz
 # RUN tar -zxvf panda3d-1.9.4.tar.gz
 RUN wget https://www.panda3d.org/download/panda3d-1.8.1/panda3d-1.8.1.tar.gz
 RUN tar -zxvf panda3d-1.8.1.tar.gz
+
+WORKDIR /home/dldata
+RUN pip install . -r requirements.txt
 
 WORKDIR /home/panda3d-1.8.1
 RUN python makepanda/makepanda.py --everything --no-vision
