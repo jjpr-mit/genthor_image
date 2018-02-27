@@ -32,17 +32,24 @@ From: singularityhub/ubuntu
   pip install --upgrade setuptools
 
   pip install boto
+  pip install cython
   pip install matplotlib
   pip install numexpr
   pip install numpy
+  pip install pandas
   pip install Pillow
   pip install pymongo
+  pip install scikit-image
+  pip install scikit-learn
+  pip install scipy
   pip install tables
   pip install tornado
+  pip install tqdm
 
   pip install git+https://github.com/yamins81/scikit-data.git#egg=skdata
   pip install git+https://github.com/jaberg/pyll.git#egg=pyll
   pip install git+https://github.com/yamins81/yamutils.git#egg=yamutils
+  pip install git+https://github.com/dicarlolab/bangmetric.git#egg=bangmetric
 
   export PATH_TO_GENTHOR=/home/genthor
   mkdir -m 777 $PATH_TO_GENTHOR
@@ -66,7 +73,7 @@ From: singularityhub/ubuntu
   python setup.py install
 
   cd /home/simpler_dldata
-  pip install . -r requirements_1.txt
+  pip install . 
 
   cd $PATH_TO_GENTHOR
   sed -i.bak -e '39,54d' setup.py
