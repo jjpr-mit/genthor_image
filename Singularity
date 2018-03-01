@@ -42,9 +42,11 @@ From: singularityhub/ubuntu
   pip install scikit-image
   pip install scikit-learn
   pip install scipy
+  pip install scipy-stack
   pip install tables
   pip install tornado
   pip install tqdm
+  pip install xarray
 
   pip install git+https://github.com/yamins81/scikit-data.git#egg=skdata
   pip install git+https://github.com/jaberg/pyll.git#egg=pyll
